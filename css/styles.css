@@ -1,3 +1,7 @@
-#results {
-  display: none;
+body{
+  background-color: #676b72;
+}
+.container{
+  background-color: #cbcfd6;
+  margin: 20px;
 }

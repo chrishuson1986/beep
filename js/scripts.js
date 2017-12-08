@@ -1,19 +1,20 @@
-$(document).ready(function() {
-  $("form#puzzle").submit(function(event) {
-    event.preventDefault();
-    var wordsToScramble = $("input#userSentence").val()
-    var splitSentence = wordsToScramble.split("")
-console.log(splitSentence);
-for (var i = 0; i < splitSentence.length; i += 1) {
-
-  if ((splitSentence[i] === "a") || (splitSentence[i] === "e") || (splitSentence[i] === "i") || (splitSentence[i] === "o") || (splitSentence[i] === "u")) {
-    splitSentence[i] = "-";
-  }
+function beepBoop(userInput){
+var result = [];
+for (var i = 1; i <= userInput; i++){
+  result.push (i);
+}
+return result;
 }
 
-var newSentence = splitSentence.join("");
+$(document).ready(function() {
+  $("form#beep").submit(function(event) {
+    $("#res").empty();
+    var userInput = parseInt($("input#userNumber").val());
+    var result = beepBoop(userInput);
 
-$("#output").text(newSentence);
-$("#results").show();
+    result.forEach(function(output) {
+    $("#userOutput").append("<li>" + output + "</li>");
+    event.preventDefault();
   });
+});
 });
