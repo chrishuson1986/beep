@@ -2,6 +2,13 @@
 
 ##### By Chris Huson
 
+###
+- Open terminal
+- Enter git clonehttps://github.com/chrishuson1986/beep.git
+- Open folder
+- Open HTML in browser
+- Enjoy
+
 ### Specification
 - input 2 return 1,2
 - returns 1's with beep
